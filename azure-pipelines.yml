@@ -17,7 +17,7 @@ strategy:
   maxParallel: 3
 
 pool:
-  vmImage: $(imageName)
+  vmImage: "vs2017-win2016"
 
 steps:
 - script: echo Hello, world!
@@ -27,6 +27,7 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+
 - task: PublishCodeCoverageResults@1
   inputs:
     codeCoverageTool: "JaCoCo"
